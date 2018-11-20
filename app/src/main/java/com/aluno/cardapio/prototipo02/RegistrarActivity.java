@@ -1,6 +1,5 @@
 package com.aluno.cardapio.prototipo02;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +17,7 @@ public class RegistrarActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registrar_acitivity);
+        setContentView(R.layout.activity_registrar);
 
         db=new DBHelper (this);
 
