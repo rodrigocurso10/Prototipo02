@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.content.Intent;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -21,6 +22,7 @@ public class LoginActivity extends AppCompatActivity {
 
         et_username = (EditText)findViewById(R.id.et_username);
         et_password = (EditText)findViewById(R.id.et_password);
+
 
         db = new DBHelper(this);
 
@@ -43,7 +45,9 @@ public class LoginActivity extends AppCompatActivity {
                     String res = db.ValidarLogin(username,password);
 
                     if (res.equals("OK")){
-                        Toast.makeText(LoginActivity.this, "Login ok", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(LoginActivity.this, "Login ok", Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(LoginActivity.this, MenuOpcoesActivity.class);
+                        startActivity(i);
                     }
                     else {
                         Toast.makeText(LoginActivity.this, "Login invalido, tente novamente", Toast.LENGTH_SHORT).show();

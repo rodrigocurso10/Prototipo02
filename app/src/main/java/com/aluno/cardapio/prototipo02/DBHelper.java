@@ -12,6 +12,7 @@ public class DBHelper extends SQLiteOpenHelper {
     private static String nome="Login_Registro_BaseDados.db";
 
     public DBHelper(Context context) {
+
         super(context, nome, null, versao);
     }
 
@@ -39,6 +40,15 @@ public class DBHelper extends SQLiteOpenHelper {
     public String ValidarLogin(String username, String password){
         SQLiteDatabase db = getWritableDatabase();
         Cursor c = db.rawQuery("SELECT * FROM Utilizador WHERE username=? AND password=?", new String[] {username, password});
+        if (c.getCount() > 0){
+            return "OK";
+        }
+        return "ERRO";
+    }
+
+    public String ExibirProduto(String username){
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM Utilizador WHERE username=?", new String[] {username});
         if (c.getCount() > 0){
             return "OK";
         }
