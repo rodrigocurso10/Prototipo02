@@ -20,11 +20,17 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String str = "CREATE TABLE Utilizador(username TEXT PRIMARY KEY, password TEXT);";
         db.execSQL(str);
+        String prob = "CREATE TABLE ProdBebida(codigo TEXT PRIMARY KEY, descricao TEXT, valor TEXT);";
+        db.execSQL(prob);
+        String proc = "CREATE TABLE ProdComida(codigo TEXT PRIMARY KEY, descricao TEXT, valor TEXT);";
+        db.execSQL(proc);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS Utilizador;");
+        db.execSQL("DROP TABLE IF EXISTS ProdBebida;");
+        db.execSQL("DROP TABLE IF EXISTS ProdComida;");
         onCreate(db);
     }
 
@@ -34,6 +40,26 @@ public class DBHelper extends SQLiteOpenHelper {
         cv.put ("username", username);
         cv.put ("password", password);
         long result = db.insert ("Utilizador",null,cv);
+        return result;
+    }
+
+    public long CadProdBebida(String codigo, String descricao, String valor){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put ("codigo", codigo);
+        cv.put ("descricao", descricao);
+        cv.put ("valor", valor);
+        long result = db.insert ("ProdBebida",null,cv);
+        return result;
+    }
+
+    public long CadProdComida(String codigo, String descricao, String valor){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put ("codigo", codigo);
+        cv.put ("descricao", descricao);
+        cv.put ("valor", valor);
+        long result = db.insert ("ProdComida",null,cv);
         return result;
     }
 

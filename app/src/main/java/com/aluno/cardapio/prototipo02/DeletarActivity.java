@@ -21,7 +21,7 @@ public class DeletarActivity extends AppCompatActivity {
 
         db=new DBHelper (this);
 
-        et_deletar = (EditText)findViewById(R.id.et_reg_username);
+        et_deletar = (EditText)findViewById(R.id.et_deletar);
 
         bt_deletar = (Button) findViewById(R.id.bt_deletar);
 

@@ -26,23 +26,25 @@ public class BebidasActivity extends AppCompatActivity {
 
         // Campos a serem lido do BD
         String[] campos = {
-                "username"
+                "descricao, valor"
         };
 
         // Cursor contém o resultado da consulta
-        Cursor cursor = banco.query("Utilizador",campos,null,null,null,null,null);
+        Cursor cursor = banco.query("ProdBebida",campos,null,null,null,null,null);
 
         // Monta um ArrayList com os dados da consulta
-        ArrayList<String> nome = new ArrayList<>();
+        ArrayList<String> codigo = new ArrayList<>();
         while (cursor.moveToNext()) { // enquanto houver dados para serem lidos, faça
 //            adiciona no arraylist o dados lido do banco
-            String username = cursor.getString(cursor.getColumnIndex("username"));
-            nome.add(username);
+            String desc = cursor.getString(cursor.getColumnIndex("descricao"));
+            codigo.add(desc);
+            String valor = cursor.getString(cursor.getColumnIndex("valor"));
+            codigo.add(valor);
         }
 
         // Criar o adapter para listar os dados
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1);
-        adapter.addAll(nome);
+        adapter.addAll(codigo);
 
         // associa o Adapter a ListView
         mListView.setAdapter(adapter);
