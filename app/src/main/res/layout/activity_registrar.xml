@@ -11,8 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="134dp"
+        android:layout_marginEnd="-97dp"
+        android:layout_marginBottom="128dp"
+        android:layout_toStartOf="@+id/et_reg_username"
         android:text="Registrar" />
 
     <EditText
@@ -22,9 +23,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
         android:ems="10"
         android:hint="Usuario"
         android:inputType="textPersonName" />
@@ -47,8 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/bt_registrar"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="135dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="143dp"
         android:ems="10"
         android:inputType="textPassword" />
 
@@ -69,7 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/textView4"
         android:layout_alignBottom="@+id/et_reg_password2"
-        android:layout_marginEnd="-44dp"
+        android:layout_marginEnd="-42dp"
         android:layout_marginBottom="4dp"
         android:text=" Confirma password" />
 
@@ -82,4 +83,5 @@
         android:layout_marginStart="-26dp"
         android:layout_marginBottom="4dp"
         android:text="Insira password" />
+
 </RelativeLayout>

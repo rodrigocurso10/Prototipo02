@@ -20,7 +20,9 @@
         <activity android:name=".RegistrarActivity" />
         <activity android:name=".MenuOpcoesActivity" />
         <activity android:name=".BebidasActivity" />
-        <activity android:name=".ComidasActivity"></activity>
+        <activity android:name=".ComidasActivity" />
+        <activity android:name=".DeletarActivity" />
+        <activity android:name=".AdministradorActivity"></activity>
     </application>
 
 </manifest>

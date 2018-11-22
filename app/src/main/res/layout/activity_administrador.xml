@@ -4,23 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".AdministradorActivity">
 
     <Button
-        android:id="@+id/bt_registrar"
+        android:id="@+id/bt_cad_cliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="172dp"
-        android:text="Administrador" />
+        android:layout_marginTop="69dp"
+        android:text="Cadastrar Cliente" />
 
     <Button
-        android:id="@+id/bt_entrar"
+        android:id="@+id/bt_cad_produto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="196dp"
-        android:text="Cliente" />
+        android:layout_marginBottom="286dp"
+        android:text="Cadastrar Produto" />
+
+    <Button
+        android:id="@+id/bt_del_cliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/bt_cad_cliente"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="150dp"
+        android:text="Deletar Cliente" />
 </RelativeLayout>

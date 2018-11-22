@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         bt_registrar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, RegistrarActivity.class);
+                Intent i = new Intent(MainActivity.this, AdministradorActivity.class);
                 startActivity(i);
             }
         });

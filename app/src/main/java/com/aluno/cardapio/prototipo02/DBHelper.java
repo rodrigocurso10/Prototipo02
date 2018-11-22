@@ -46,12 +46,11 @@ public class DBHelper extends SQLiteOpenHelper {
         return "ERRO";
     }
 
-    public String ExibirProduto(String username){
+    public int deleteItem(String username) {
         SQLiteDatabase db = getWritableDatabase();
-        Cursor c = db.rawQuery("SELECT * FROM Utilizador WHERE username=?", new String[] {username});
-        if (c.getCount() > 0){
-            return "OK";
-        }
-        return "ERRO";
+        String whereClause = "username=?";
+        String whereArgs[] = {username};
+        return db.delete("Utilizador", whereClause, whereArgs);
     }
+
 }
