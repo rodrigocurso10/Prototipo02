@@ -23,24 +23,12 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginRight="83dp"
         android:ems="10"
         android:hint="Usuario"
         android:inputType="textPersonName" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/et_reg_username"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="53dp"
-        android:layout_marginLeft="53dp"
-        android:layout_marginBottom="-2dp"
-        android:text="Usuario" />
 
     <EditText
         android:id="@+id/et_reg_password1"
@@ -51,6 +39,7 @@
         android:layout_marginStart="1dp"
         android:layout_marginTop="148dp"
         android:ems="10"
+        android:hint="Insira password"
         android:inputType="textPassword" />
 
     <EditText
@@ -62,26 +51,7 @@
         android:layout_marginStart="6dp"
         android:layout_marginBottom="242dp"
         android:ems="10"
+        android:hint=" Confirma password"
         android:inputType="textPassword" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/textView4"
-        android:layout_alignBottom="@+id/et_reg_password2"
-        android:layout_marginEnd="-42dp"
-        android:layout_marginBottom="4dp"
-        android:text=" Confirma password" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView4"
-        android:layout_alignBottom="@+id/et_reg_password1"
-        android:layout_marginStart="-26dp"
-        android:layout_marginBottom="4dp"
-        android:text="Insira password" />
 
 </RelativeLayout>

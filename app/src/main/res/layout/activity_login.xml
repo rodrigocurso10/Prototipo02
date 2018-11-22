@@ -14,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="109dp"
         android:ems="10"
-        android:hint="Insera username"
+        android:hint="Insira username"
         android:inputType="textPersonName" />
 
     <Button
