@@ -23,7 +23,8 @@
         <activity android:name=".ComidasActivity" />
         <activity android:name=".DeletarActivity" />
         <activity android:name=".AdministradorActivity" />
-        <activity android:name=".ProdutoActivity"></activity>
+        <activity android:name=".ProdutoActivity" />
+        <activity android:name=".TesteActivity"></activity>
     </application>
 
 </manifest>

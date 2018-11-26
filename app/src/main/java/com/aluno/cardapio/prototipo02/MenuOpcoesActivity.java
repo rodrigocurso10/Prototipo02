@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MenuOpcoesActivity extends AppCompatActivity {
 
-    Button bt_bebidas, bt_comidas;
+    Button bt_bebidas, bt_comidas, bt_teste;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +17,7 @@ public class MenuOpcoesActivity extends AppCompatActivity {
 
         bt_bebidas=(Button) findViewById(R.id.bt_bebidas);
         bt_comidas=(Button) findViewById(R.id.bt_comidas);
+        bt_teste=(Button) findViewById(R.id.bt_teste);
 
         bt_bebidas.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -30,6 +31,14 @@ public class MenuOpcoesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MenuOpcoesActivity.this, ComidasActivity.class);
+                startActivity(i);
+            }
+        });
+
+        bt_teste.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MenuOpcoesActivity.this, TesteActivity.class);
                 startActivity(i);
             }
         });

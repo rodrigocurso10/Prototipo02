@@ -9,15 +9,15 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-
-public class BebidasActivity extends AppCompatActivity {
+public class TesteActivity extends AppCompatActivity {
 
     ListView mListView;
     DBHelper db;
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bebidas);
+        setContentView(R.layout.activity_teste);
 
         mListView = findViewById(R.id.lista);
         db = new DBHelper(this);
@@ -38,8 +38,8 @@ public class BebidasActivity extends AppCompatActivity {
 //            adiciona no arraylist o dados lido do banco
             String desc = cursor.getString(cursor.getColumnIndex("descricao"));
             codigo.add(desc);
-//            String valor = cursor.getString(cursor.getColumnIndex("valor"));
-//            codigo.add(valor);
+            String valor = cursor.getString(cursor.getColumnIndex("valor"));
+            codigo.add(valor);
         }
 
         // Criar o adapter para listar os dados
